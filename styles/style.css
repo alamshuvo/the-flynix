@@ -558,24 +558,37 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-bottom: 3rem;
 }
+
+
+
 
 .card {
+  position: relative;
   padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
+  border: 1px solid rgb(226, 232, 240);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-.card:hover {
-  transform: translateY(-5px);
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--card-gradient);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
 }
-
 .card-img {
   width: 3.5rem;
+  height: 3.5rem;
   object-fit: cover;
   margin-bottom: 1.5rem;
   display: flex;
@@ -583,6 +596,11 @@ a {
   align-items: center;
   padding: 10px;
   border-radius: 1rem;
+  background: var(--card-gradient);
+  position: relative;
+  z-index: 1;
+
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card .card-title {
@@ -595,5 +613,66 @@ a {
   line-height: 1.625;
   color: var(--color-text-muted);
 }
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
 
+/* gradient vibe strength */
+.card:hover::before {
+  opacity: 0.12; /* adjust for more/less vibe */
+}
+
+/* image animation */
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card:hover .card-img img {
+  transform: scale(1.10);
+}
+
+/* text contrast on hover */
+.card:hover .card-title {
+  color: var(--color-btn);
+}
+
+.card:hover .card-desc {
+  color: #374151;
+}
+.explore-text{
+  color: var(--color-btn);
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  gap: 10px;
+}
+
+.explore-text .arrow {
+  width: 15px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Arrow head */
+.explore-text .arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* Hover effect */
+.explore-text:hover .arrow {
+  transform: scaleX(0.7) translateX(4px); /* shrink effect */
+}
 /* experties section css end */

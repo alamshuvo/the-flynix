@@ -45,7 +45,7 @@ a {
 .container {
   max-width: 1340px;
   margin: 0 auto;
-  padding: 10px 0px;
+  padding: 10px 48px;
 }
 @keyframes bounce {
   0%,
@@ -236,7 +236,7 @@ a {
   top: 0;
   z-index: 9999;
   background-color: #ffffff;
-  padding: 0 48px;
+  
   transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 /* Active state after scroll */
@@ -535,7 +535,7 @@ a {
 .experties-wrapper {
 }
 .experties-content {
-  padding: 96px 48px;
+  padding: 96px 0px;
 }
 /* common class for same design class */
 .experties-text-first {
@@ -677,7 +677,78 @@ a {
   transform: scaleX(0.7) translateX(4px); /* shrink effect */
 }
 /* experties section css end */
+/* client states css start */
+.states-wrapper{
+  padding: 5rem 3rem;
+  background-color: #1a2437;
+}
 
+/* Grid */
+.states-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .states-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card */
+.state-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.state-card:hover {
+  transform: scale(1.05);
+}
+
+/* Icon box */
+.state-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto ;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.state-card:hover .state-icon {
+  transform: scale(1.1);
+}
+
+/* Image */
+.state-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Text */
+.state-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: .5rem;
+  line-height: 1;
+}
+
+.state-label {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+  
+}
+
+/* client states css end */
 
 
 /* footer css start */

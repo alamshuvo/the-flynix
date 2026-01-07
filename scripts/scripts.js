@@ -79,3 +79,45 @@ cardsData.forEach((card) => {
   container.appendChild(cardElement);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".state-value");
+  const section = document.querySelector(".states-content-wrapper");
+
+  let started = false;
+
+  const startCount = () => {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      const suffix = counter.dataset.suffix || "+";
+      let count = 0;
+
+      const increment = target / 100;
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = Math.ceil(count) + suffix;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
+        startCount();
+      }
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(section);
+});
+
+

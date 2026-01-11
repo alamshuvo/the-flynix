@@ -860,25 +860,25 @@ a {
   font-family: "Inter", sans-serif;
 }
 
-.about__container {
+.about-container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.about__grid {
+.about-grid {
   display: grid;
   gap: 64px;
 }
 
 @media (min-width: 1024px) {
-  .about__grid {
+  .about-grid {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
   }
 }
 
 /* LEFT */
-.about__badge {
+.about-badge {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 999px;
@@ -890,7 +890,7 @@ a {
   margin-bottom: 24px;
 }
 
-.about__title {
+.about-title {
   font-size: 44px;
   font-weight: 700;
   line-height: 1.2;
@@ -898,14 +898,14 @@ a {
   color: #0f172a;
 }
 
-.about__title span {
+.about-title span {
   display: block;
   background: linear-gradient(90deg, #0d9488, #f59e0b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.about__text {
+.about-text {
   font-size: 18px;
   color: #475569;
   margin-bottom: 20px;
@@ -913,29 +913,29 @@ a {
 }
 
 /* FEATURES */
-.about__features {
+.about-features {
   margin: 32px 0;
 }
 
-.about__feature {
+.about-feature {
   display: flex;
   gap: 14px;
   margin-bottom: 18px;
 }
 
-.about__feature h4 {
+.about-feature h4 {
   font-size: 16px;
   font-weight: 600;
   color: #0f172a;
   margin-bottom: 4px;
 }
 
-.about__feature p {
+.about-feature p {
   color: #475569;
 }
 
 /* BUTTON */
-.about__btn {
+.about-btn {
   display: inline-block;
   padding: 12px 32px;
   background: #0d9488;
@@ -946,56 +946,56 @@ a {
   transition: background 0.3s ease;
 }
 
-.about__btn:hover {
+.about-btn:hover {
   background: #0f766e;
 }
 
 /* RIGHT CARDS */
-.about__cards {
+.about-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
-.about__card {
+.about-card {
   padding: 2rem;
   border-radius: 24px;
   background: #fff;
 }
 
-.about__card h3 {
+.about-card h3 {
   font-size: 20px;
   margin-bottom: 8px;
   color: #0f172a;
 }
 
-.about__card p {
+.about-card p {
   color: #475569;
 }
 
 /* CARD BACKGROUNDS */
-.about__card--teal {
+.about-card-teal {
   background: linear-gradient(135deg, #ecfdf5, #cffafe);
 }
 
-.about__card--amber {
+.about-card-amber {
   background: linear-gradient(135deg, #fffbeb, #ffedd5);
 }
 
-.about__card--blue {
+.about-card-blue {
   background: linear-gradient(135deg, #eff6ff, #e0e7ff);
 }
 
-.about__card--purple {
+.about-card-purple {
   background: linear-gradient(135deg, #faf5ff, #fce7f3);
 }
 
 /* CARD OFFSET */
-.about__card--up {
+.about-card-up {
   transform: translateY(-15px);
 }
 
-.about__card--down {
+.about-card-down {
   transform: translateY(20px);
 }
 
@@ -1017,33 +1017,33 @@ a {
 }
 
 /* LARGE ICONS */
-.icon--teal-lg,
-.icon--amber-lg,
-.icon--blue-lg,
-.icon--purple-lg {
+.icon-teal-lg,
+.icon-amber-lg,
+.icon-blue-lg,
+.icon-purple-lg {
   width: 48px;
   height: 48px;
   margin-bottom: 16px;
 }
 
 /* ICON COLORS */
-.icon--teal {
+.icon-teal {
   color: #0d9488;
 }
 
-.icon--teal-lg {
+.icon-teal-lg {
   color: #0d9488;
 }
 
-.icon--amber-lg {
+.icon-amber-lg {
   color: #f59e0b;
 }
 
-.icon--blue-lg {
+.icon-blue-lg {
   color: #2563eb;
 }
 
-.icon--purple-lg {
+.icon-purple-lg {
   color: #9333ea;
 }
 
